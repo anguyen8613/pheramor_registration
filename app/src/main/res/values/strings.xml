@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Pheramor Registration</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="username">Username</string>
+    <string name="password_title">Create a password</string>
+    <string name="password">8 characters minimum</string>
+    <string name="re_enter_password">Confirm Password</string>
+    <string name="email">example@gmail.com</string>
+
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+
+    <string name ="email_title"> Register your email</string>
+
+    <string name="user_info_title"> Tell us who you are</string>
+    <string name="user_info_additional_title">Let us know more</string>
+
+    <string name="interest_title">Interests and Attraction</string>
+
+    <string name="race_religion_title">Background Information (optional)</string>
+    <string name="pick_picture_title">Lets add a profile picture</string>
+
+    <string name="date_picker_title">Select Birthdate</string>
+
+</resources>
