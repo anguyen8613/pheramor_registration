@@ -14,6 +14,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -109,6 +110,8 @@ public class ProfileScreenFragment extends Fragment{
                 }
             }
         });
+
+        Toast.makeText(getActivity(), "Click on Profile Picture", Toast.LENGTH_SHORT).show();
         return v;
     }
 
