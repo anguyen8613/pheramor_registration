@@ -14,10 +14,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.nio.BufferUnderflowException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
+
+import b.android.pheramorregistration.models.User;
 
 public class UserInfoAdditionalFragment extends Fragment {
 

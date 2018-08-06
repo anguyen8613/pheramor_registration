@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
+import b.android.pheramorregistration.models.User;
+
 public class ProfileScreenFragment extends Fragment{
 
     private static final String ARGS_USER = "user";

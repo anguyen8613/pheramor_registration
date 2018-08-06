@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import b.android.pheramorregistration.models.User;
 import biz.borealis.numberpicker.NumberPicker;
 
 public class InterestFragment extends Fragment {

@@ -2,7 +2,6 @@ package b.android.pheramorregistration;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,7 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
+
+import b.android.pheramorregistration.models.User;
 
 public class RaceAndReligionFragment extends Fragment {
 
