@@ -1,26 +1,28 @@
-package b.android.pheramorregistration;
+package b.android.pheramorregistration.models;
 
 import android.graphics.Bitmap;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 
 public class User implements Serializable {
 
-    String email;
-    String password;
-    String fullName;
-    int zipCode;
-    int Height;
-    String gender;
-    Date dateOfBirth;
-    boolean maleInterest;
-    boolean femaleInterest;
-    int minAge;
-    int maxAge;
-    String race;
-    String religion;
-    Bitmap profilePicture;
+
+    private String email;
+    private String password;
+    private String fullName;
+    private int zipCode;
+    private int Height;
+    private String gender;
+    private Date dateOfBirth;
+    private boolean maleInterest;
+    private boolean femaleInterest;
+    private int minAge;
+    private int maxAge;
+    private String race;
+    private String religion;
+    private Bitmap profilePicture;
 
     public String getEmail() {
         return email;

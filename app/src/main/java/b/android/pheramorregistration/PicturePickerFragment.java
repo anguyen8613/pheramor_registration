@@ -28,6 +28,14 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import b.android.pheramorregistration.models.User;
+import b.android.pheramorregistration.services.RetrofitClient;
+import b.android.pheramorregistration.services.UsersApi;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.http.POST;
+
 
 public class PicturePickerFragment extends Fragment {
 
@@ -184,6 +192,26 @@ public class PicturePickerFragment extends Fragment {
         requestQueue.add(objectRequest);
     }
 
+    private void postUser(){
+
+        Retrofit retrofit = RetrofitClient.getRetrofitClient(UsersApi.BASE_URL);
+
+        UsersApi usersApi = retrofit.create(UsersApi.class);
+
+        Call<POST> post = usersApi.createUser(mUser);
+        post.enqueue(new Callback<POST>() {
+            @Override
+            public void onResponse(Call<POST> call, retrofit2.Response<POST> response) {
+                Log.d("Response",response.toString());
+            }
+
+            @Override
+            public void onFailure(Call<POST> call, Throwable t) {
+                Log.d("Response", "Post failed");
+            }
+        });
+    }
+
     private void postRequest(){
         String URL = "https://external.dev.pheramor.com/";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
@@ -215,7 +243,7 @@ public class PicturePickerFragment extends Fragment {
                 params.put("MAX_AGE", Integer.toString(mUser.getMaxAge()));
                 params.put("RACE", mUser.getRace());
                 params.put("RELIGION", mUser.getReligion());
-                params.put("PROFILE_PICTURE", mUser.profilePicture.toString());
+                params.put("PROFILE_PICTURE", mUser.getProfilePicture().toString());
 
                 return params;
             }
